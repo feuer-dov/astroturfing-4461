@@ -1,6 +1,6 @@
 # Topic Idea Document
 
-# Is the Grass Too Green?: A Study on Astroturfing
+# Is the Grass Too Green?: Simulating AI to AI Astroturfing
 ## Dov FEUER
 ## Aziz DURDYKLYCHEV
 ## https://github.com/feuer-dov/astroturfing-4461/tree/main
