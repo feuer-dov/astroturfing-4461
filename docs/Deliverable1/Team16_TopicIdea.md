@@ -1,9 +1,9 @@
 # Topic Idea Document
 
 # Is the Grass Too Green?: A Study on Astroturfing
-Dov FEUER
-Aziz DURDYKLYCHEV
-https://github.com/feuer-dov/astroturfing-4461/tree/main
+## Dov FEUER
+## Aziz DURDYKLYCHEV
+## https://github.com/feuer-dov/astroturfing-4461/tree/main
 
 # Section 1: Phenomena of Interest
 The phenomena that our group has chosen is astroturfing, the illusion of grassroots support or dissent, particularly on social media, and how bots interact with each other and with bot generated content to create this illusion. This topic is directly relevant to the course themes, which explores the effects of social bots, their interaction with human agents, and the entities within a social media ecosystem’s trophic structure which interact with one another. It further relates to the goal hierarchy, where each attempt at astroturfing can be characterized by low-level action (i.e., posting AI generated content, or reposts from fake accounts), intermediate behaviour (i.e., campaign to promote product or elect a political candidate), and high-level goals (dishonest brand promotion or building a perception of grassroots support for a political party).
