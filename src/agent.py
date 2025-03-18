@@ -1,29 +1,39 @@
 from mesa import Agent
 
 class BotAmplifier(Agent):
-    def __init__(self, model):
+    def __init__(self, model, bot_id):
         super().__init__(model)
+        self.bot_id = bot_id
         
-    def step(self):
-        # if liking a post is safe
+        
+    def step(self): #added self as a parameter 
+        # Define the bot's identity string
+        bot_identity = "bot_" + str(self.bot_id)
         for post in self.model.posts:
-            post.add_like(self) # Added self as a parameter so it can be stored in the liked_by list
-            print(f"[Bot {self.unique_id}] liked Post {post.post_id}") #Added unique_id
+            # If bot hasnt liked the post already then it will
+            if bot_identity not in post.liked_by:
+                post.add_like(self)
+                print(f"[Bot {self.bot_id}] liked Post {post.post_id}")
+         
 
         
 class HumanUser(Agent):
-    def __init__(self, model):
+    def __init__(self, model, human_id):
         super().__init__(model)
+        self.human_id = human_id
         
-    def step(self):
-        # encounters posts based on algorithm, decides to like and share
+         # encounters posts based on algorithm, decides to like and share
+    def step(self): #added self as a parameter 
+        human_identity = "human_" + str(self.human_id)
         for post in self.model.posts:
-            if post.visibility > 0.6:
-                post.add_like(self) # Added self as a parameter so it can be stored in the liked_by list
-                print(f"[Human {self.unique_id}] liked Post {post.post_id}") #Added unique_id
+            # If human hasnt already liked a post then it will
+            if human_identity not in post.liked_by:
+                if post.visibility >= 0.6:
+                 post.add_like(self)
+                 print(f"[Human {self.human_id}] liked Post {post.post_id}")
 
         
-class ContentModerator(Agent):
+class ContentModerator(Agent): 
     def __init__(self, model):
         super().__init__(model)
         
