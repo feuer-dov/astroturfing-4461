@@ -34,6 +34,10 @@ class AstroturfingModel(Model):
     def __init__(self):
         super().__init__()
         self.posts = [Post(post_id=i) for i in range(5)]
+        
+        sample_size = int(0.6 * len(self.posts))
+        self.posts_to_like = self.random.sample(self.posts, sample_size)
+
 
         #counters for each id
         self.bot_id = 0
@@ -41,7 +45,7 @@ class AstroturfingModel(Model):
       
          # Create humans
         for i in range(5):
-            human = HumanUser(model=self, human_id=self.human_id)
+            human = HumanUser(model=self, human_id=self.human_id, chance_to_like=0.05)
             self.human_id += 1
 
        
