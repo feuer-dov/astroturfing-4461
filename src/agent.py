@@ -14,7 +14,7 @@ class BotAmplifier(Agent):
         for post in self.model.posts_to_like:  # Iterates through the subset of posts
         # Only boost if humans haven't liked it too much
             human_likes = post.count_likes_by_type("human_")
-            if human_likes < 20:  # e.g. stop boosting if 20 humans have liked it
+            if human_likes < 10:  # e.g. stop boosting if 20 humans have liked it
                 if bot_identity not in post.liked_by:
                     post.add_like(self)
                     print(f"[Bot {self.bot_id}] liked Post {post.post_id}")

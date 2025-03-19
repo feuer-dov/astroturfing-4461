@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 model = AstroturfingModel()
 
-for i in range(12):
+for i in range(16):
     print(f"\n--- Step {i} ---")
     model.step()
     for post in model.posts:  # prints the post info
