@@ -1,6 +1,6 @@
 from mesa import Model
 from agent import BotAmplifier, HumanUser
-
+from mesa.datacollection import DataCollector
 
 class Post:
     def __init__(self, post_id):
@@ -29,6 +29,9 @@ class Post:
         # Print post info with the like history.
             print(f"Post {self.post_id}: {self.likes} likes, liked by: {', '.join(self.liked_by)}")
 
+    def count_likes_by_type(self, agent_type_prefix):
+        return sum(1 for agent_id in self.liked_by if agent_id.startswith(agent_type_prefix))
+
     
 class AstroturfingModel(Model):
     def __init__(self):
@@ -44,11 +47,16 @@ class AstroturfingModel(Model):
         self.human_id = 0
       
          # Create humans
-        for i in range(5):
+        for i in range(20):
             human = HumanUser(model=self, human_id=self.human_id, chance_to_like=0.05)
             self.human_id += 1
 
+        reporters = {}
        
+        reporters["Total_Bot_Likes"] = lambda m: sum(post.count_likes_by_type("bot_") for post in m.posts)
+        reporters["Total_Human_Likes"] = lambda m: sum(post.count_likes_by_type("human_") for post in m.posts)
+
+        self.datacollector = DataCollector(model_reporters=reporters)
 
     def step(self):
 
@@ -60,4 +68,4 @@ class AstroturfingModel(Model):
       
 
         self.agents.shuffle_do("step")
-
+        self.datacollector.collect(self)

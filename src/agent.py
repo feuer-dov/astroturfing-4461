@@ -7,14 +7,18 @@ class BotAmplifier(Agent):
      
         
         
-    def step(self): #added self as a parameter so it can be passed into add_like
-        # Define the bot's identity string
+    def step(self):  # added self as a parameter so it can be passed into add_like
+    # Define the bot's identity string
         bot_identity = "bot_" + str(self.bot_id)
-        for post in self.model.posts_to_like: #Iterates through subset of posts
-            # If bot hasnt liked the post already then it will
+    
+        for post in self.model.posts_to_like:  # Iterates through the subset of posts
+        # Only boost if humans haven't liked it too much
+            human_likes = post.count_likes_by_type("human_")
+            if human_likes < 20:  # e.g. stop boosting if 20 humans have liked it
                 if bot_identity not in post.liked_by:
                     post.add_like(self)
                     print(f"[Bot {self.bot_id}] liked Post {post.post_id}")
+
          
 
         
@@ -32,7 +36,7 @@ class HumanUser(Agent):
 
                 # Determine effective chance based on post visibility.
                 if post.visibility >= 0.6:
-                    effective_chance = 1.0
+                    effective_chance = 0.95
                 else:
                     effective_chance = self.chance_to_like
 
