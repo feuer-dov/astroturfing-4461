@@ -36,7 +36,7 @@ class Post:
 class AstroturfingModel(Model):
     def __init__(self):
         super().__init__()
-        self.posts = [Post(post_id=i) for i in range(5)]
+        self.posts = [Post(post_id=i) for i in range(20)]
         
         sample_size = int(0.6 * len(self.posts))
         self.posts_to_like = self.random.sample(self.posts, sample_size)
