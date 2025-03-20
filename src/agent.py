@@ -4,13 +4,16 @@ class BotAmplifier(Agent):
     def __init__(self, model, bot_id):
         super().__init__(model)
         self.bot_id = bot_id
-        self.posts = self.model.posts_to_like
      
         
         
     def step(self):  # added self as a parameter so it can be passed into add_like
-    
-        for post in self.model.posts_to_like:  # Iterates through the subset of posts
+        
+        # Determine subset of posts bots will like
+        sample_size = int(0.25 * len(self.model.posts))
+        self.posts_to_like = self.random.sample(self.model.posts, sample_size)
+        
+        for post in self.posts_to_like:  # Iterates through the subset of posts
         # # Only boost if humans haven't liked it too much
         #     total_likes = post.get_total_likes()
         #     if total_likes < 5000:  # e.g. stop boosting if 20 humans have liked it
@@ -24,7 +27,7 @@ class HumanUser(Agent):
     def __init__(self, model, human_id, chance_to_like):
         super().__init__(model)
         self.human_id = human_id
-        self.chance_to_like = chance_to_like # starts at 0.05 and increases to 1 once visibility >= 60
+        self.chance_to_like = chance_to_like 
 
     def step(self):
         x, y = self.pos  # Human's position
@@ -36,7 +39,7 @@ class HumanUser(Agent):
 
             # Within influence radius of the post
             if dist_x <= post.get_influence_radius() and dist_y <= post.get_influence_radius():
-                if self not in post.liked_by:
+                if self not in post.liked_by and self.chance_to_like >= 0.3:
                     post.add_like(self)
                     self.model.total_human_likes += 1
                     print(f"[Human {self.human_id}] liked Post {post.post_id}")

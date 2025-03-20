@@ -11,8 +11,8 @@ def astroturfing_portrayal(agent):
 
 space_component = make_space_component(astroturfing_portrayal, draw_grid=False)
 chart_component = make_plot_component({
-    "Total_Bot_Likes": "blue",
-    "Total_Human_Likes": "orange"
+    "Total_Bot_Likes": "green",
+    "Total_Human_Likes": "blue"
 })
 
 model_params = {
