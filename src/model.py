@@ -2,6 +2,7 @@ from mesa import Model
 from agent import BotAmplifier, HumanUser, PostAgent
 from mesa.datacollection import DataCollector
 from mesa.space import MultiGrid
+import random
 
 class AstroturfingModel(Model):
     def __init__(self, num_bots=3, num_humans=20, num_posts=5, grid_size=10):
@@ -35,7 +36,8 @@ class AstroturfingModel(Model):
     
          # Create humans
         for i in range(self.num_humans):
-            human = HumanUser(model=self, human_id=self.human_id, chance_to_like=0.05)
+            chance_to_like = random.random()
+            human = HumanUser(model=self, human_id=self.human_id, chance_to_like=chance_to_like)
             self.human_id += 1
             x = self.random.randrange(self.grid.width)
             y = self.random.randrange(self.grid.height)
@@ -55,10 +57,7 @@ class AstroturfingModel(Model):
         
 
     def step(self):
-         # Determine subset of posts bots will like
-        sample_size = int(0.25 * len(self.posts))
-        self.posts_to_like = self.random.sample(self.posts, sample_size)
-        
+
         self.agents.shuffle_do("step")
         self.datacollector.collect(self)
         print(f"\nBot Likes: {self.total_bot_likes}. Human Likes: {self.total_human_likes}")
