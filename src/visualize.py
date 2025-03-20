@@ -4,12 +4,10 @@ from agent import HumanUser, PostAgent, BotAmplifier
 
 def astroturfing_portrayal(agent):
     if isinstance(agent, HumanUser):
-        return {"color": "blue", "size": 30}
-    elif isinstance(agent, BotAmplifier):
-        return {"color": "green", "size": 25}
+        return {"color": "blue", "size": 30, "layer": 1}
     elif isinstance(agent, PostAgent):
         size = agent.get_visual_size()
-        return {"color": "red", "size": size, "layer": 1}
+        return {"color": "red", "size": size, "layer": 0}
 
 space_component = make_space_component(astroturfing_portrayal, draw_grid=False)
 chart_component = make_plot_component({
