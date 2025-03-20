@@ -6,6 +6,7 @@ from mesa.space import MultiGrid
 class AstroturfingModel(Model):
     def __init__(self, num_bots=3, num_humans=20, num_posts=5, grid_size=10):
         super().__init__()
+        self.grid_size = grid_size
         self.grid = MultiGrid(width=grid_size, height=grid_size, torus=False)
         self.space = self.grid
         self.num_bots = num_bots

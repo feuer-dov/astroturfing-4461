@@ -64,7 +64,7 @@ class PostAgent(Agent):
             print(f"Post {self.post_id}: {self.get_total_likes()} likes, influence radius: {self.get_influence_radius()}")
     
     def get_influence_radius(self):
-        return self.get_total_likes()+1    
+        return self.get_total_likes()+1   
     
     def get_visual_size(self):
         return int(30 * self.get_influence_radius())
