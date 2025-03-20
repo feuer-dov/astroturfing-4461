@@ -6,7 +6,7 @@
 
 §C. Limitations and planned improvements for the next phase.
 
-Improvements:
+Improvements for next deliverable:
 
 -More dynamic bot/human behaviour 
 
