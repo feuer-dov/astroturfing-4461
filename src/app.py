@@ -13,7 +13,7 @@ def run_simulation(steps=20, **model_kwargs):
 all_runs = []
 
 for i in range(100):  # Runs the model 100 times
-    df = run_simulation(steps=30, num_bots=10, num_humans=20, num_posts=5, grid_size=10)
+    df = run_simulation(steps=30, num_bots=10, num_humans=20, num_posts=5, grid_size=100)
     df["Run"] = i  
     all_runs.append(df)
 

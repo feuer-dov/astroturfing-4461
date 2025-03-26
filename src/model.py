@@ -1,5 +1,5 @@
 from mesa import Model
-from agent import BotAmplifier, HumanUser, PostAgent
+from agent import BotAmplifier, HumanUser, PostAgent, ContentModerator
 from mesa.datacollection import DataCollector
 from mesa.space import MultiGrid
 import random
@@ -14,6 +14,12 @@ class AstroturfingModel(Model):
         self.num_humans = num_humans
         self.num_posts = num_posts
         self.posts_to_like = []
+        
+        # Track removals, add implemenation
+        
+        
+        # total number of users
+        self.total_users = num_bots + num_humans
         
         self.total_bot_likes = 0
         self.total_human_likes = 0
@@ -47,6 +53,10 @@ class AstroturfingModel(Model):
         for i in range(self.num_bots):
             bot = BotAmplifier(model=self, bot_id=self.bot_id)
             self.bot_id += 1
+            
+        # Create content moderator
+        
+        content_moderator = ContentModerator(model=self)
 
         reporters = {}
        
@@ -60,10 +70,11 @@ class AstroturfingModel(Model):
 
         self.agents.shuffle_do("step")
         self.datacollector.collect(self)
+        print(f"Step {self.steps} complete:")
         print(f"\nBot Likes: {self.total_bot_likes}. Human Likes: {self.total_human_likes}")
         print("Posts:")
-        for post in self.posts:
-            post.print_info()
+        # for post in self.posts:
+        #     post.print_info()
         
         # for i in range(10):
         #     bot = BotAmplifier(model=self, bot_id=self.bot_id)
