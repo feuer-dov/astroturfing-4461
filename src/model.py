@@ -14,6 +14,8 @@ class AstroturfingModel(Model):
         self.num_humans = num_humans
         self.num_posts = num_posts
         self.posts_to_like = []
+        self.removed_posts = []
+        self.steps = 0
         
         # Track removals, add implemenation
         
@@ -66,10 +68,24 @@ class AstroturfingModel(Model):
         self.datacollector = DataCollector(model_reporters=reporters)
         
 
+    def add_new_posts(self):
+            post = PostAgent(model=self, post_id=self.post_id)
+            self.post_id += 1
+            x = self.random.randrange(self.grid.width)
+            y = self.random.randrange(self.grid.height)
+            self.grid.place_agent(post, (x, y))
+            self.posts.append(post)   
+
     def step(self):
 
+        self.steps += 1
         self.agents.shuffle_do("step")
         self.datacollector.collect(self)
+
+        if self.steps % 10 == 0:
+            self.add_new_posts()  # Add 3 new posts, or adjust as needed
+            
+
         print(f"Step {self.steps} complete:")
         print(f"\nBot Likes: {self.total_bot_likes}. Human Likes: {self.total_human_likes}")
         print("Posts:")
