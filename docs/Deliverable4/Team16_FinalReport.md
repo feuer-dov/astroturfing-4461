@@ -32,7 +32,8 @@ Step 9: Illusion of grassroots support
 
 This section presents the simulation results of astroturfing dynamics under various bot behavior conditions. We analyze how the presence, quantity, and adaptability of bots influence both human engagement and the effectiveness of moderation mechanisms.
 ________________________________________
-3.1 Overview
+# 3.1 Overview
+
 Our simulations model the spread and suppression of artificially boosted content through bot amplification and content moderation. We tested three main configurations:
 1.	No Bot Adaptation (baseline)
 2.	Bot Adaptation Enabled
