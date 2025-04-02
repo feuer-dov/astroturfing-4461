@@ -53,15 +53,21 @@ ________________________________________
 
 Here, bots enter "safe mode" after their likes contribute to banned posts. In this mode, they limit their activity to low-risk regions (left side of the grid).
 Step 12: Bot adaptation begins. Few posts are banned early, suggesting bots quickly identify and avoid high-moderation zones. The grid exhibits a spatial shift: most orange (amplified) posts emerge on the left. Small right-side posts remain unamplified.
+
 Step 28: Adaptation intensifies. Nearly all boosted content appears in moderation-safe zones. The right-side is effectively "avoided" by bots, which correlates with reduced detection and fewer red posts. Human engagement is improved slightly, as bots now avoid posts likely to be banned.
+
 Step 105: The adaptation mechanism fully stabilizes. Amplification is now geographically constrained. Bots avoid bans and persistently grow posts in safe regions. Human likes outpace bot likes over time. This could reflect increased human exposure to long-lived, bot-boosted posts. Bans still occur but at lower frequencies.
+
 Interpretation: Adaptation enables bots to evade detection effectively. While this may reduce moderation success, it also avoids the aggressive surges that attract human moderators. The system demonstrates emergent spatial self-regulation: bots herd in low-risk zones, making moderation more difficult.
 ________________________________________
 **3.4 Extreme Bot Configurations**
 
 High Bot Count (100 bots, 1 human): Despite adaptation being enabled, the overwhelming presence of bots leads to excessive post amplification. The moderation system is quickly saturated. Red posts proliferate, and bot likes dominate. Human engagement is negligible. Detection still functions to a degree but cannot match the scale of manipulation.
+
 Interpretation: There exists a critical threshold above which moderation collapses. Bot saturation overrides adaptive behavior, creating a content flood that moderation cannot suppress fast enough.
+
 Low Bot Count (15 bots, 100 humans): In this configuration, bots successfully avoid detection entirely. Amplification occurs stealthily, never crossing moderation thresholds. Posts persist and grow slowly, offering ideal conditions for gradual human engagement.
+
 Interpretation: Below a certain bot-to-human ratio, bot influence becomes indistinguishable from organic behavior. The system's moderation fails to identify manipulation, allowing astroturfing to proceed undetected. Interestingly, increasing to 20 bots resumes detection, suggesting a fragile boundary between stealth and exposure.
 ________________________________________
 **3.5 Emergent Behaviors and Surprises**
