@@ -8,7 +8,7 @@ It is important for misinformation bots to be caught and banned however, as they
 
 Agent-Based Modeling is an effective approach to studying astroturfing as it allows for large-scale simulations of interactions between bots, human users and platform detection mechanisms (human moderators or AI). By modeling these interactions, we can gain a deeper understanding of how bots influence users and develop better counter measures for it. ABM also allows us to modify agent behaviour to mimic how agents would act in a real media ecosystem. 
 
-![image](https://github.com/user-attachments/assets/9ab0d39d-01fe-49d8-8f1e-7c3ea1ffce36)
+![image|700](https://github.com/user-attachments/assets/9ab0d39d-01fe-49d8-8f1e-7c3ea1ffce36)
 
 Step 0: The Setup
 
