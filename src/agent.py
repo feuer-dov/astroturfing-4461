@@ -5,23 +5,39 @@ class BotAmplifier(Agent):
     def __init__(self, model, bot_id):
         super().__init__(model)
         self.bot_id = bot_id
-     
-        
-        
-    def step(self):  # added self as a parameter so it can be passed into add_like
-        
-        # Determine subset of posts bots will like
-        sample_size = int(0.25 * len(self.model.posts))
-        self.posts_to_like = self.random.sample(self.model.posts, sample_size)
-        
-        for post in self.posts_to_like:  # Iterates through the subset of posts
-        # # Only boost if humans haven't liked it too much
-        #     total_likes = post.get_total_likes()
-        #     if total_likes < 5000:  # e.g. stop boosting if 20 humans have liked it
-                if self not in post.liked_by:
-                    post.add_like(self)
-                    self.model.total_bot_likes += 1
-                    # print(f"[Bot {self.bot_id}] liked Post {post.post_id}")
+        self.banned_likes = 0
+        self.safe_mode = False
+       
+
+    def step(self):
+        # Check if any of this bot's liked posts were banned
+        for post in self.model.removed_posts:
+            if self in post.liked_by:
+                self.banned_likes += 1
+           
+
+        # If too many bans, enter safe mode permanently
+        if self.banned_likes >= 2 and not self.safe_mode:
+            self.safe_mode = True
+            print(f"[Bot {self.bot_id}] entering SAFE MODE due to {self.banned_likes} banned posts.")
+
+        # Pick posts to like
+        valid_posts = [p for p in self.model.posts if not p.removed and self not in p.liked_by]
+        sample_size = int(0.25 * len(valid_posts))
+
+        if self.safe_mode:
+            # Only like posts on the left side (low X values)
+            safe_zone = [p for p in valid_posts if p.pos[0] <= self.model.grid.width * 0.4]
+            posts_to_like = self.random.sample(safe_zone, min(sample_size, len(safe_zone))) if safe_zone else []
+        else:
+            # Normal behavior
+            posts_to_like = self.random.sample(valid_posts, min(sample_size, len(valid_posts)))
+
+        for post in posts_to_like:
+            post.add_like(self)
+            self.model.total_bot_likes += 1
+
+
 
          
 class HumanUser(Agent):
@@ -54,6 +70,8 @@ class PostAgent(Agent):
         self.influence_radius = 1
         self.removed = False
         self.expected_likes = 0
+        self.created_at_step = self.model.steps
+
 
     def get_radius(self):
         return max(1, int(self.visibility * 10))  # visibility 0.5 = 5-cell radius
@@ -87,8 +105,11 @@ class PostAgent(Agent):
         return int(30 * self.get_influence_radius())
     
     def get_like_rate(self):
-        number_of_steps = self.model.steps
-        return self.get_total_likes() / number_of_steps
+        steps_alive = max(1, self.model.steps - self.created_at_step)
+        like_rate = self.get_total_likes() / steps_alive
+
+        return like_rate
+
 
     def get_expected_like_rate(self):
         return self.expected_likes / self.model.steps
@@ -159,18 +180,22 @@ class ContentModerator(Agent):
             x, y = post.pos
             
             mod_intensity = x / self.model.grid.width
-            like_threshold = (1 - mod_intensity) * 20
+            like_threshold = (1 - mod_intensity) * 10
             
             total_likes = post.get_total_likes()
             like_rate = post.get_like_rate()
 
             if total_likes > 20 and like_rate > like_threshold:
                 to_remove.append(post)
+
+        
+           
+
                 
          
         for post in to_remove:
             post.prepare_remove()
+            self.model.removed_posts.append(post)
             self.model.posts.remove(post)      
             
-
 
