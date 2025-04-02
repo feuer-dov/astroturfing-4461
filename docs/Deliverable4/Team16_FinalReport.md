@@ -11,15 +11,18 @@ Agent-Based Modeling is an effective approach to studying astroturfing as it all
 ![image](https://github.com/user-attachments/assets/9ab0d39d-01fe-49d8-8f1e-7c3ea1ffce36)
 
 Step 0: The Setup
+
 *At the beginning of the simulation, posts are not liked yet. Only a few humans interact with content (blue dots), and no meaningful popularity has emerged yet.*
 
 ![image](https://github.com/user-attachments/assets/c983ec24-6b3e-4001-a753-cdd64d3e00ef)
 
 Step 3: Artificial Momentum
+
 *A surge of bot activity drives rapid growth in engagement for select posts (orange circles), inflating their visibility. These posts begin to appear legitimate due to the volume of likes—even though this growth is artificial. Some posts are already being flagged and removed (red).*
 
 ![image](https://github.com/user-attachments/assets/db174cc3-0238-4c36-9af8-3cecc46130d8)
 
 Step 9: Illusion of grassroots support
+
 *As bot engagement plateaus, human users begin interacting with these highly visible posts. The human like count surpasses the bot like count, giving the illusion that the content is gaining traction organically.*
 
