@@ -50,7 +50,8 @@ In this baseline setting, bots uniformly amplify posts regardless of their posit
 **Step 28:** Bot activity remains constant across the grid. While new posts continue to appear, a noticeable fraction (especially on the right) are banned early. Smaller red posts suggest detection before significant amplification occurs. Human likes increase once bot-influenced posts grow large enough to enter human influence radii.
 
 **Step 105:** A steady stream of bans persists. Some posts avoid detection, particularly those seeded toward the left or center. The system achieves a dynamic equilibrium: posts rise, attract bots, and are either banned or remain if they grow subtly. Bot likes stabilize as moderation throttles bot efficacy. Human engagement climbs significantly over time as surviving posts reach sufficient visibility.
-Interpretation: In the absence of adaptation, bots play an aggressive role, often triggering moderation. The system moderately suppresses astroturfing, but detection blind spots remain, especially in under-moderated regions.
+
+**Interpretation:** In the absence of adaptation, bots play an aggressive role, often triggering moderation. The system moderately suppresses astroturfing, but detection blind spots remain, especially in under-moderated regions.
 ________________________________________
 **3.3 Bot Adaptation Enabled** 
 
@@ -61,23 +62,26 @@ Step 12: Bot adaptation begins. Few posts are banned early, suggesting bots quic
 
 **Step 105:** The adaptation mechanism fully stabilizes. Amplification is now geographically constrained. Bots avoid bans and persistently grow posts in safe regions. Human likes outpace bot likes over time. This could reflect increased human exposure to long-lived, bot-boosted posts. Bans still occur but at lower frequencies.
 
-Interpretation: Adaptation enables bots to evade detection effectively. While this may reduce moderation success, it also avoids the aggressive surges that attract human moderators. The system demonstrates emergent spatial self-regulation: bots herd in low-risk zones, making moderation more difficult.
+**Interpretation:** Adaptation enables bots to evade detection effectively. While this may reduce moderation success, it also avoids the aggressive surges that attract human moderators. The system demonstrates emergent spatial self-regulation: bots herd in low-risk zones, making moderation more difficult.
 ________________________________________
 **3.4 Extreme Bot Configurations**
 
 **High Bot Count (100 bots, 1 human):** Despite adaptation being enabled, the overwhelming presence of bots leads to excessive post amplification. The moderation system is quickly saturated. Red posts proliferate, and bot likes dominate. Human engagement is negligible. Detection still functions to a degree but cannot match the scale of manipulation.
 
-Interpretation: There exists a critical threshold above which moderation collapses. Bot saturation overrides adaptive behavior, creating a content flood that moderation cannot suppress fast enough.
+**Interpretation:** There exists a critical threshold above which moderation collapses. Bot saturation overrides adaptive behavior, creating a content flood that moderation cannot suppress fast enough.
 
 **Low Bot Count (15 bots, 100 humans):** In this configuration, bots successfully avoid detection entirely. Amplification occurs stealthily, never crossing moderation thresholds. Posts persist and grow slowly, offering ideal conditions for gradual human engagement.
 
-Interpretation: Below a certain bot-to-human ratio, bot influence becomes indistinguishable from organic behavior. The system's moderation fails to identify manipulation, allowing astroturfing to proceed undetected. Interestingly, increasing to 20 bots resumes detection, suggesting a fragile boundary between stealth and exposure.
+**Interpretation:** Below a certain bot-to-human ratio, bot influence becomes indistinguishable from organic behavior. The system's moderation fails to identify manipulation, allowing astroturfing to proceed undetected. Interestingly, increasing to 20 bots resumes detection, suggesting a fragile boundary between stealth and exposure.
 ________________________________________
 **3.5 Emergent Behaviors and Surprises**
 
 •	Geographic Avoidance: Bots organically migrate toward low-risk zones without explicit spatial logic. This reflects an emergent behavior based on moderation pressure.
+
 •	Post Lifespan Shifts: Adaptive bot behavior prolongs the lifespan of posts. This results in more human exposure and higher human engagement.
+
 •	Detection Saturation: A high enough bot population overwhelms moderation, even with adaptation enabled.
+
 •	Suppressed Human Activity: In non-adaptive or highly bot-dominant runs, human engagement is stifled due to the early banning of posts, reducing opportunities for humans to interact with content.
 ________________________________________
 **3.6 Conclusion**
