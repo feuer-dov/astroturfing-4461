@@ -17,6 +17,7 @@ class AstroturfingModel(Model):
         self.removed_posts = []
         self.steps = 0
         
+        
         # Track removals, add implemenation
         
         
@@ -83,7 +84,7 @@ class AstroturfingModel(Model):
         self.datacollector.collect(self)
 
         if self.steps % 10 == 0:
-            self.add_new_posts()  # Add 3 new posts, or adjust as needed
+            self.add_new_posts()  # Add new posts
             
 
         print(f"Step {self.steps} complete:")

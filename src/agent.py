@@ -7,15 +7,17 @@ class BotAmplifier(Agent):
         self.bot_id = bot_id
         self.banned_likes = 0
         self.safe_mode = False
+       
 
     def step(self):
         # Check if any of this bot's liked posts were banned
         for post in self.model.removed_posts:
             if self in post.liked_by:
                 self.banned_likes += 1
+           
 
         # If too many bans, enter safe mode permanently
-        if self.banned_likes >= 10 and not self.safe_mode:
+        if self.banned_likes >= 2 and not self.safe_mode:
             self.safe_mode = True
             print(f"[Bot {self.bot_id}] entering SAFE MODE due to {self.banned_likes} banned posts.")
 
@@ -25,7 +27,7 @@ class BotAmplifier(Agent):
 
         if self.safe_mode:
             # Only like posts on the left side (low X values)
-            safe_zone = [p for p in valid_posts if p.pos[0] <= self.model.grid.width * 0.3]
+            safe_zone = [p for p in valid_posts if p.pos[0] <= self.model.grid.width * 0.4]
             posts_to_like = self.random.sample(safe_zone, min(sample_size, len(safe_zone))) if safe_zone else []
         else:
             # Normal behavior
@@ -104,7 +106,9 @@ class PostAgent(Agent):
     
     def get_like_rate(self):
         steps_alive = max(1, self.model.steps - self.created_at_step)
-        return self.get_total_likes() / steps_alive
+        like_rate = self.get_total_likes() / steps_alive
+
+        return like_rate
 
 
     def get_expected_like_rate(self):
@@ -176,13 +180,17 @@ class ContentModerator(Agent):
             x, y = post.pos
             
             mod_intensity = x / self.model.grid.width
-            like_threshold = (1 - mod_intensity) * 20
+            like_threshold = (1 - mod_intensity) * 10
             
             total_likes = post.get_total_likes()
             like_rate = post.get_like_rate()
 
             if total_likes > 20 and like_rate > like_threshold:
                 to_remove.append(post)
+
+        
+           
+
                 
          
         for post in to_remove:
