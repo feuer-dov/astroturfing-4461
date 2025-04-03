@@ -1,4 +1,6 @@
 # Final Report
+### Dov FEUER
+### Aziz DURDYKLYCHEV
 
 # §1. Phenomenon Overview
 
