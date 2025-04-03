@@ -108,3 +108,15 @@ ________________________________________
 The simulation demonstrates the delicate interplay between bot strategies and moderation effectiveness. Non-adaptive bots are easily caught but still exert considerable influence before bans. Adaptive bots, however, learn to survive and thrive under pressure, avoiding detection and amplifying content in moderation shadows. At extreme scales, bot activity can still override adaptation or overwhelm detection systems.
 These findings offer real-world insights into how malicious actors might evade platform moderation using simple adaptive logic, and where current moderation schemes may fall short in identifying more subtle or geographically constrained astroturfing campaigns
 
+# §5. Lessons Learned & Future Directions
+________________________________________
+**5.1 Design and Development Reflections**
+
+Designing a simulation of astroturfing behavior using agent-based modeling (ABM) presented several key challenges, particularly around capturing the subtlety of bot strategies and the complex interactions between amplification and moderation. One of the earliest difficulties was ensuring that bots could realistically influence post visibility while also triggering detection mechanisms in a dynamic way. We needed to strike a balance where bots were neither overpowered nor completely ineffective.
+
+A major technical hurdle was designing a content moderation mechanism that could meaningfully respond to the evolving behavior of bots. Since our goal was to simulate emergent behaviors, we deliberately avoided hardcoding any central coordination among bots. This forced us to rely on simple heuristics—like post location or like rate—as proxies for moderation triggers. Tuning these heuristics to allow for both successful and failed moderation outcomes required repeated testing and adjustment.
+
+Implementing adaptive bot behavior was one of the most intellectually engaging parts of the project. Our bots began in a naïve state, but after contributing to banned posts, they shifted into a "safe mode" where they limited amplification to under-moderated zones. This required storing state within each bot and tracking banned post histories. The challenge here was not the implementation itself, but achieving a behavior that felt emergent rather than deterministic.
+
+We also faced integration issues between the model logic and visualization tooling. For instance, sliders and real-time simulation tuning sometimes behaved unexpectedly or did not fully reset internal state. While these were mostly technical bugs, they reminded us of the importance of robustness in user-facing modeling tools.
+
