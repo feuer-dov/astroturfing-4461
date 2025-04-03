@@ -191,6 +191,10 @@ Zerback, T., Töpfl, F., & Knöpfle, M. (2021). The disconcerting potential of o
 disinformation: Persuasive effects of astroturfing comments and three strategies for
 inoculation against them. New Media & Society, 23(5), 1080–1098.
 https://doi.org/10.1177/1461444820908530
+
+Chan, J. (2022b). Online astroturfing: A problem beyond disinformation. Philosophy &amp; Social Criticism, 50(3), 507–528. https://doi.org/10.1177/01914537221108467 
+
+
 # §7. Attestation
 
 This final report represents a collaborative effort by all group members, with clear and substantial contributions from each participant. The following summary outlines the specific roles and responsibilities undertaken by Aziz and Dov in accordance with the Contributor Role Taxonomy (CRediT).
