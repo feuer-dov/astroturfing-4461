@@ -122,7 +122,7 @@ Implementing adaptive bot behavior was one of the most intellectually engaging p
 
 We also faced integration issues between the model logic and visualization tooling. For instance, sliders and real-time simulation tuning sometimes behaved unexpectedly or did not fully reset internal state. While these were mostly technical bugs, they reminded us of the importance of robustness in user-facing modeling tools.
 
-5.2 Model Limitations & Areas for Improvement
+**5.2 Model Limitations & Areas for Improvement**
 
 Our model, while illustrative, necessarily simplifies several aspects of real-world astroturfing. Most notably, the bots in our simulation operate without any sophistication beyond random sampling and basic positional filtering. In reality, bots often exploit trends, language models, and coordinated timing to enhance influence. Introducing more complex behaviors like coordinated botnets or reinforcement learning agents could significantly improve realism.
 
@@ -131,7 +131,8 @@ Another limitation is that our human users are passive and act only based on loc
 From a computational perspective, our model scales well to small and medium agent populations but would likely struggle with large-scale simulations (e.g., thousands of posts and users). Optimizing agent selection and modularizing updates could help improve performance.
 In future work, we also hope to integrate real-world datasets to calibrate parameters (e.g., bot-to-human ratios, like rates, moderation thresholds). This would allow for both greater external validity and meaningful comparisons with observed data.
 
-5.3 Future Applications
+**5.3 Future Applications**
+
 The findings from this project suggest several avenues for future application. First, our results could inform social media platform policy. For instance, our observation that bots shift amplification behavior away from heavily moderated regions suggests that platforms could benefit from dynamic moderation schemes that adapt in response to behavioral shifts.
 Second, the model offers insight for AI safety and adversarial behavior research. The concept of agents adapting their behavior to avoid detection parallels real-world adversarial strategies. Studying these dynamics in a controlled simulation can help inform the design of more resilient moderation algorithms.
 Third, this model has educational potential as a tool to demonstrate how online manipulation operates at scale. Simplifying the interface for interactive classroom use could help communicate the risks of astroturfing to non-technical audiences.
