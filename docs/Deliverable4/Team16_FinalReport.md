@@ -140,7 +140,7 @@ Lastly, future extensions could explore coordinated bot activity (e.g., botnets)
 In sum, while the current model provides a strong foundation for illustrating astroturfing dynamics, there is considerable potential for future development both as a research tool and as a foundation for practical intervention strategies.
 
 
-# §Citations
+# § Citations
 
 Radivojevic, K., McAleer, C., Conley, C., Kennedy, C., & Brenner, P. (2024, September 27). Social Media Bot Policies: Evaluating passive and active enforcement. arXiv.org. https://arxiv.org/abs/2409.18931 
 
