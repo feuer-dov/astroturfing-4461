@@ -68,7 +68,7 @@ In this baseline setting, bots uniformly amplify posts regardless of their posit
 
 ![image](https://github.com/user-attachments/assets/d79e529d-3c16-46d3-8625-90b237e12ef1)
 
-**Step 28:** Bot activity remains constant across the grid. While new posts continue to appear, a noticeable fraction (especially on the right) are banned early. Smaller red posts suggest detection before significant amplification occurs. Human likes increase once bot-influenced posts grow large enough to enter human influence radii.
+**Step 28:** Bot activity remains constant across the grid. While new posts continue to appear, a noticeable fraction (especially on the right) are banned early. Smaller red posts suggest detection before significant amplification occurs. Human likes increase once bot-influenced posts grow large enough to enter human influence radius.
 
 ![image](https://github.com/user-attachments/assets/f53b3e67-add3-4abb-bc56-75e53f6c80c8)
 
@@ -100,11 +100,11 @@ Step 12: Bot adaptation begins. Few posts are banned early, suggesting bots quic
 ________________________________________
 **3.4 Extreme Bot Configurations**
 
-**High Bot Count (100 bots, 1 human):** Despite adaptation being enabled, the overwhelming presence of bots leads to excessive post amplification. The moderation system is quickly saturated. Red posts proliferate, and bot likes dominate. Human engagement is negligible. Detection still functions to a degree but cannot match the scale of manipulation.
+**High Bot Count (100 bots, 1 human):** Even with adaptation enabled, the sheer number of bots makes evasion nearly impossible. The moderation system successfully detects and removes the majority of manipulated posts, as the scale of bot activity draws clear patterns of suspicion. Red posts are widespread, demonstrating this. 
 
 ![image](https://github.com/user-attachments/assets/9599a76f-8d4c-45b5-9d4c-e1c8586d3a59)
 
-**Interpretation:** There exists a critical threshold above which moderation collapses. Bot saturation overrides adaptive behavior, creating a content flood that moderation cannot suppress fast enough.
+**Interpretation:** There exists a critical threshold above which adaptation fails. Bot saturation overrides adaptive behavior, creating a content flood that the moderator easily catches. 
 
 **Low Bot Count (15 bots, 100 humans):** In this configuration, bots successfully avoid detection entirely. Amplification occurs stealthily, never crossing moderation thresholds. Posts persist and grow slowly, offering ideal conditions for gradual human engagement.
 
