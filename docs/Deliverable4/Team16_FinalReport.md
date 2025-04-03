@@ -139,3 +139,18 @@ Third, this model has educational potential as a tool to demonstrate how online 
 Lastly, future extensions could explore coordinated bot activity (e.g., botnets) and countermeasures like decentralized moderation or collective human response. This could support the development of decentralized governance systems that are both resilient and democratic.
 In sum, while the current model provides a strong foundation for illustrating astroturfing dynamics, there is considerable potential for future development both as a research tool and as a foundation for practical intervention strategies.
 
+
+# §Citations
+
+Radivojevic, K., McAleer, C., Conley, C., Kennedy, C., & Brenner, P. (2024, September 27). Social Media Bot Policies: Evaluating passive and active enforcement. arXiv.org. https://arxiv.org/abs/2409.18931 
+
+Zerback, T., Töpfl, F., & Knöpfle, M. (2021). The disconcerting potential of online
+disinformation: Persuasive effects of astroturfing comments and three strategies for
+inoculation against them. New Media & Society, 23(5), 1080–1098.
+https://doi.org/10.1177/1461444820908530
+
+
+Keller, F. B., Schoch, D., Stier, S., & Yang, J. (2020). Political Astroturfing on Twitter: How to
+Coordinate a Disinformation Campaign. Political Communication, 37(2), 256–280.
+https://doi.org/10.1080/10584609.2019.1661888
+
