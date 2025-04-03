@@ -108,7 +108,9 @@ ________________________________________
 The simulation demonstrates the delicate interplay between bot strategies and moderation effectiveness. Non-adaptive bots are easily caught but still exert considerable influence before bans. Adaptive bots, however, learn to survive and thrive under pressure, avoiding detection and amplifying content in moderation shadows. At extreme scales, bot activity can still override adaptation or overwhelm detection systems.
 These findings offer real-world insights into how malicious actors might evade platform moderation using simple adaptive logic, and where current moderation schemes may fall short in identifying more subtle or geographically constrained astroturfing campaigns
 
+
 # §5. Lessons Learned & Future Directions
+
 ________________________________________
 **5.1 Design and Development Reflections**
 
@@ -119,4 +121,20 @@ A major technical hurdle was designing a content moderation mechanism that could
 Implementing adaptive bot behavior was one of the most intellectually engaging parts of the project. Our bots began in a naïve state, but after contributing to banned posts, they shifted into a "safe mode" where they limited amplification to under-moderated zones. This required storing state within each bot and tracking banned post histories. The challenge here was not the implementation itself, but achieving a behavior that felt emergent rather than deterministic.
 
 We also faced integration issues between the model logic and visualization tooling. For instance, sliders and real-time simulation tuning sometimes behaved unexpectedly or did not fully reset internal state. While these were mostly technical bugs, they reminded us of the importance of robustness in user-facing modeling tools.
+
+5.2 Model Limitations & Areas for Improvement
+
+Our model, while illustrative, necessarily simplifies several aspects of real-world astroturfing. Most notably, the bots in our simulation operate without any sophistication beyond random sampling and basic positional filtering. In reality, bots often exploit trends, language models, and coordinated timing to enhance influence. Introducing more complex behaviors like coordinated botnets or reinforcement learning agents could significantly improve realism.
+
+The moderation model also operates on relatively simple heuristics based on post location and like rate. In practice, moderation systems are more nuanced and may rely on user reports, metadata, or behavioral histories. Expanding the moderation framework to include these variables would make the simulation more robust.
+Another limitation is that our human users are passive and act only based on local influence. While this captures a core mechanism of information spread, it omits higher-order social dynamics, such as homophily, trust networks, or individual susceptibility to persuasion. Incorporating a network structure among humans could allow us to study how astroturfing cascades through connected groups.
+From a computational perspective, our model scales well to small and medium agent populations but would likely struggle with large-scale simulations (e.g., thousands of posts and users). Optimizing agent selection and modularizing updates could help improve performance.
+In future work, we also hope to integrate real-world datasets to calibrate parameters (e.g., bot-to-human ratios, like rates, moderation thresholds). This would allow for both greater external validity and meaningful comparisons with observed data.
+
+5.3 Future Applications
+The findings from this project suggest several avenues for future application. First, our results could inform social media platform policy. For instance, our observation that bots shift amplification behavior away from heavily moderated regions suggests that platforms could benefit from dynamic moderation schemes that adapt in response to behavioral shifts.
+Second, the model offers insight for AI safety and adversarial behavior research. The concept of agents adapting their behavior to avoid detection parallels real-world adversarial strategies. Studying these dynamics in a controlled simulation can help inform the design of more resilient moderation algorithms.
+Third, this model has educational potential as a tool to demonstrate how online manipulation operates at scale. Simplifying the interface for interactive classroom use could help communicate the risks of astroturfing to non-technical audiences.
+Lastly, future extensions could explore coordinated bot activity (e.g., botnets) and countermeasures like decentralized moderation or collective human response. This could support the development of decentralized governance systems that are both resilient and democratic.
+In sum, while the current model provides a strong foundation for illustrating astroturfing dynamics, there is considerable potential for future development both as a research tool and as a foundation for practical intervention strategies.
 
