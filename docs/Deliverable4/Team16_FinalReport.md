@@ -45,18 +45,17 @@ ________________________________________
 
 In this baseline setting, bots uniformly amplify posts regardless of their position or moderation risk.
 
+**Step 12:** Initial posts received rapid boosts from bots, and several were quickly flagged and banned. Red dots in the far right region illustrate effective early detection. As bots show no risk aversion, their actions frequently trigger moderation.
 
 ![image](https://github.com/user-attachments/assets/d79e529d-3c16-46d3-8625-90b237e12ef1)
 
-**Step 12:** Initial posts received rapid boosts from bots, and several were quickly flagged and banned. Red dots in the far right region illustrate effective early detection. As bots show no risk aversion, their actions frequently trigger moderation.
+**Step 28:** Bot activity remains constant across the grid. While new posts continue to appear, a noticeable fraction (especially on the right) are banned early. Smaller red posts suggest detection before significant amplification occurs. Human likes increase once bot-influenced posts grow large enough to enter human influence radii.
 
 ![image](https://github.com/user-attachments/assets/f53b3e67-add3-4abb-bc56-75e53f6c80c8)
 
-**Step 28:** Bot activity remains constant across the grid. While new posts continue to appear, a noticeable fraction (especially on the right) are banned early. Smaller red posts suggest detection before significant amplification occurs. Human likes increase once bot-influenced posts grow large enough to enter human influence radii.
+**Step 105:** A steady stream of bans persists. Some posts avoid detection, particularly those seeded toward the left or center. The system achieves a dynamic equilibrium: posts rise, attract bots, and are either banned or remain if they grow subtly. Bot likes stabilize as moderation throttles bot efficacy. Human engagement climbs significantly over time as surviving posts reach sufficient visibility.
 
 ![image](https://github.com/user-attachments/assets/e7204c29-1c4b-47ef-8bbe-f698d85893cf)
-
-**Step 105:** A steady stream of bans persists. Some posts avoid detection, particularly those seeded toward the left or center. The system achieves a dynamic equilibrium: posts rise, attract bots, and are either banned or remain if they grow subtly. Bot likes stabilize as moderation throttles bot efficacy. Human engagement climbs significantly over time as surviving posts reach sufficient visibility.
 
 **Interpretation:** In the absence of adaptation, bots play an aggressive role, often triggering moderation. The system moderately suppresses astroturfing, but detection blind spots remain, especially in under-moderated regions.
 ________________________________________
