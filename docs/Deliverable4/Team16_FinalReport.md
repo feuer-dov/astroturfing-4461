@@ -116,11 +116,11 @@ ________________________________________
 ________________________________________
 **3.5 Emergent behaviours and Surprises**
 
-•	Geographic Avoidance: Bots organically migrate toward low-risk zones without explicit spatial logic. This reflects an emergent behaviour based on moderation pressure.
+•	**Geographic Avoidance:** Bots organically migrate toward low-risk zones without explicit spatial logic. This reflects an emergent behaviour based on moderation pressure.
 
-•	Post Lifespan Shifts: Adaptive bot behaviour prolongs the lifespan of posts. This results in more human exposure and higher human engagement.
+•	**Post Lifespan Shifts:** Adaptive bot behaviour prolongs the lifespan of posts. This results in more human exposure and higher human engagement.
 
-•	Suppressed Human Activity: In non-adaptive or highly bot-dominant runs, human engagement is stifled due to the early banning of posts, reducing opportunities for humans to interact with content.
+•	**Suppressed Human Activity:** In non-adaptive or highly bot-dominant runs, human engagement is stifled due to the early banning of posts, reducing opportunities for humans to interact with content.
 ________________________________________
 **3.6 Conclusion**
 
