@@ -154,18 +154,17 @@ Designing a simulation of astroturfing behavior using agent-based modeling (ABM)
 
 A major technical hurdle was designing a content moderation mechanism that could meaningfully respond to the evolving behavior of bots. Since our goal was to simulate emergent behaviors, we deliberately avoided hardcoding any central coordination among bots. This forced us to rely on simple heuristics—like post location or like rate—as proxies for moderation triggers. Tuning these heuristics to allow for both successful and failed moderation outcomes required repeated testing and adjustment.
 
-Implementing adaptive bot behavior was one of the most intellectually engaging parts of the project. Our bots began in a naïve state, but after contributing to banned posts, they shifted into a "safe mode" where they limited amplification to under-moderated zones. This required storing state within each bot and tracking banned post histories. The challenge here was not the implementation itself, but achieving a behavior that felt emergent rather than deterministic.
+Implementing adaptive bot behavior was one of the most intellectually engaging parts of the project. Our bots began in a naive state, but after contributing to banned posts, they shifted into a "safe mode" where they limited amplification to under-moderated zones. This required storing state within each bot and tracking banned post histories. The challenge here was not the implementation itself, but achieving a behavior that felt emergent rather than deterministic.
 
-We also faced integration issues between the model logic and visualization tooling. For instance, sliders and real-time simulation tuning sometimes behaved unexpectedly or did not fully reset internal state. While these were mostly technical bugs, they reminded us of the importance of robustness in user-facing modeling tools.
 
 **5.2 Model Limitations & Areas for Improvement**
 
-Our model, while illustrative, necessarily simplifies several aspects of real-world astroturfing. Most notably, the bots in our simulation operate without any sophistication beyond random sampling and basic positional filtering. In reality, bots often exploit trends, language models, and coordinated timing to enhance influence. Introducing more complex behaviors like coordinated botnets or reinforcement learning agents could significantly improve realism.
+Our model, while illustrative, simplifies several aspects of real-world astroturfing. Most notably, the bots in our simulation operate without any sophistication beyond random sampling and basic positional filtering. In reality, bots often exploit trends, language models, and coordinated timing to enhance influence. Introducing more complex behaviors like coordinated botnets or reinforcement learning agents could significantly improve realism.
 
 The moderation model also operates on relatively simple heuristics based on post location and like rate. In practice, moderation systems are more nuanced and may rely on user reports, metadata, or behavioral histories. Expanding the moderation framework to include these variables would make the simulation more robust.
-Another limitation is that our human users are passive and act only based on local influence. While this captures a core mechanism of information spread, it omits higher-order social dynamics, such as homophily, trust networks, or individual susceptibility to persuasion. Incorporating a network structure among humans could allow us to study how astroturfing cascades through connected groups.
-From a computational perspective, our model scales well to small and medium agent populations but would likely struggle with large-scale simulations (e.g., thousands of posts and users). Optimizing agent selection and modularizing updates could help improve performance.
-In future work, we also hope to integrate real-world datasets to calibrate parameters (e.g., bot-to-human ratios, like rates, moderation thresholds). This would allow for both greater external validity and meaningful comparisons with observed data.
+Another limitation is that our human users are passive and act only based on local influence. While this captures a core mechanism of information spread, it omits higher-order social dynamics such as trust networks, or individual susceptibility to persuasion. Incorporating a network structure among humans could allow us to study how astroturfing cascades through connected groups.
+From a computational perspective, our model scales well to small and medium agent populations but would likely struggle with large-scale simulations (e.g., thousands of posts and users). Optimizing agent selection could help improve performance.
+
 
 **5.3 Future Applications**
 
