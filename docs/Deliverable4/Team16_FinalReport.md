@@ -118,13 +118,11 @@ ________________________________________
 
 •	Post Lifespan Shifts: Adaptive bot behavior prolongs the lifespan of posts. This results in more human exposure and higher human engagement.
 
-•	Detection Saturation: A high enough bot population overwhelms moderation, even with adaptation enabled.
-
 •	Suppressed Human Activity: In non-adaptive or highly bot-dominant runs, human engagement is stifled due to the early banning of posts, reducing opportunities for humans to interact with content.
 ________________________________________
 **3.6 Conclusion**
 
-The simulation demonstrates the delicate interplay between bot strategies and moderation effectiveness. Non-adaptive bots are easily caught but still exert considerable influence before bans. Adaptive bots, however, learn to survive and thrive under pressure, avoiding detection and amplifying content in moderation shadows. At extreme scales, bot activity can still override adaptation or overwhelm detection systems.
+The simulation demonstrates the delicate interplay between bot strategies and moderation effectiveness. Non-adaptive bots are easily caught but still exert considerable influence before bans. Adaptive bots, however, learn to survive, avoiding detection and amplifying content in low moderation zones. 
 These findings offer real-world insights into how malicious actors might evade platform moderation using simple adaptive logic, and where current moderation schemes may fall short in identifying more subtle or geographically constrained astroturfing campaigns
 
 # §4. Ethical & Societal Reflections
