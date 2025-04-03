@@ -83,9 +83,13 @@ ________________________________________
 
 **High Bot Count (100 bots, 1 human):** Despite adaptation being enabled, the overwhelming presence of bots leads to excessive post amplification. The moderation system is quickly saturated. Red posts proliferate, and bot likes dominate. Human engagement is negligible. Detection still functions to a degree but cannot match the scale of manipulation.
 
+![image](https://github.com/user-attachments/assets/9599a76f-8d4c-45b5-9d4c-e1c8586d3a59)
+
 **Interpretation:** There exists a critical threshold above which moderation collapses. Bot saturation overrides adaptive behavior, creating a content flood that moderation cannot suppress fast enough.
 
 **Low Bot Count (15 bots, 100 humans):** In this configuration, bots successfully avoid detection entirely. Amplification occurs stealthily, never crossing moderation thresholds. Posts persist and grow slowly, offering ideal conditions for gradual human engagement.
+
+![image](https://github.com/user-attachments/assets/b0679ef2-257b-4b62-9e90-1f756eac011b)
 
 **Interpretation:** Below a certain bot-to-human ratio, bot influence becomes indistinguishable from organic behavior. The system's moderation fails to identify manipulation, allowing astroturfing to proceed undetected. Interestingly, increasing to 20 bots resumes detection, suggesting a fragile boundary between stealth and exposure.
 ________________________________________
