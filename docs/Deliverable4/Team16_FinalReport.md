@@ -62,11 +62,20 @@ ________________________________________
 **3.3 Bot Adaptation Enabled** 
 
 Here, bots enter "safe mode" after their likes contribute to banned posts. In this mode, they limit their activity to low-risk regions (left side of the grid).
+
 Step 12: Bot adaptation begins. Few posts are banned early, suggesting bots quickly identify and avoid high-moderation zones. The grid exhibits a spatial shift: most orange (amplified) posts emerge on the left. Small right-side posts remain unamplified.
+
+![image](https://github.com/user-attachments/assets/3b8eb56e-3423-486d-868e-da3a3233b159)
+
 
 **Step 28:** Adaptation intensifies. Nearly all boosted content appears in moderation-safe zones. The right-side is effectively "avoided" by bots, which correlates with reduced detection and fewer red posts. Human engagement is improved slightly, as bots now avoid posts likely to be banned.
 
+![image](https://github.com/user-attachments/assets/ed0d7ef6-1d5d-420a-9ce7-0ddf22afd47f)
+
+
 **Step 105:** The adaptation mechanism fully stabilizes. Amplification is now geographically constrained. Bots avoid bans and persistently grow posts in safe regions. Human likes outpace bot likes over time. This could reflect increased human exposure to long-lived, bot-boosted posts. Bans still occur but at lower frequencies.
+
+![image](https://github.com/user-attachments/assets/15bd52d7-7989-4dac-96c0-40095d5d5449)
 
 **Interpretation:** Adaptation enables bots to evade detection effectively. While this may reduce moderation success, it also avoids the aggressive surges that attract human moderators. The system demonstrates emergent spatial self-regulation: bots herd in low-risk zones, making moderation more difficult.
 ________________________________________
